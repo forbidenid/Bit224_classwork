@@ -1,28 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BIT224CAT2</title>
-  </head>
-  <body>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      <button type="submit">Submit</button>
-    </form>
-
-    <script>
-      const nameInput = document.getElementById("name");
-
-      function validateForm() {
-        if (nameInput.value === "") {
-          alert("Name can't be blank");
-          return false;
-        }
-        return true;
-      }
-
-      const submitButton = document.querySelector("button[type=submit]");
-      submitButton.addEventListener("click", validateForm);
-    </script>
-  </body>
+<head>
+<meta charset=utf-8 />
+<title>BIT224</title>
+<script src="script.js"></script>
+<style>
+body {padding-top:50px} 
+</style> 
+</head>
+<body>
+<input type="text" id="text1"></input>
+<input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+<input type="button" id="button2" value="Display" onclick="display_array();"></input>
+<div id="Result"></div> 
+</body>
 </html>
