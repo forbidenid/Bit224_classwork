@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Grade Calculator</title>
+  </head>
+  <body>
+    <h1>Grade Calculator</h1>
+    <p>This program calculates the average marks and corresponding grade for a group of students.</p>
+    <script>
+      // Paste the JavaScript code here
+      const students = [
+        { name: 'David', marks: 80 },
+        { name: 'Vinoth', marks: 77 },
+        { name: 'Divya', marks: 88 },
+        { name: 'Ishitha', marks: 95 },
+        { name: 'Thomas', marks: 68 },
+      ];
+
+      let sum = 0;
+      for (let i = 0; i < students.length; i++) {
+        sum += students[i].marks;
+      }
+      const average = sum / students.length;
+
+      let grade;
+      if (average < 60) {
+        grade = 'F';
+      } else if (average < 70) {
+        grade = 'D';
+      } else if (average < 80) {
+        grade = 'C';
+      } else if (average < 90) {
+        grade = 'B';
+      } else {
+        grade = 'A';
+      }
+
+      console.log(`The average marks is ${average.toFixed(2)}, and the corresponding grade is ${grade}.`);
+    </script>
+  </body>
+</html>
